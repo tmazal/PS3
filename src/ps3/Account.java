@@ -53,9 +53,10 @@ public class Account {
 		System.out.printf("You withdrew $.%2f", withdrawal);
 		return balance -= withdrawal;
 	}
-	
+
 	public double deposit(double depositAmt){
 		System.out.printf("You deposited $.%2f", depositAmt);
 		return balance += depositAmt;
 	}
 }
+

@@ -14,6 +14,5 @@ public class AccountTest {
 	acc1.withdraw(2500);
 	acc1.deposit(3000);
 	
-	
 	//set?
 }
