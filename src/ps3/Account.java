@@ -1,5 +1,6 @@
 package ps3;
 import java.util.Date;
+import ps3.InsufficientFundsException;
 
 public class Account {
 	private int id = 0;
@@ -49,13 +50,19 @@ public class Account {
 		return annualInterestRate / 12;
 	}
 	
-	public double withdraw(double withdrawal){
-		System.out.printf("You withdrew $.%2f", withdrawal);
-		return balance -= withdrawal;
+	public double withdraw(double withdrawal) throws InsufficientFundsException{
+		if ((balance - withdrawal) > 0){
+			System.out.printf("You withdrew $%.2f \n", withdrawal);
+			return balance -= withdrawal;	
+		}
+		else{
+			throw new InsufficientFundsException(balance - withdrawal);
+		}
+
 	}
 
 	public double deposit(double depositAmt){
-		System.out.printf("You deposited $.%2f", depositAmt);
+		System.out.printf("You deposited $%.2f \n", depositAmt);
 		return balance += depositAmt;
 	}
 }
