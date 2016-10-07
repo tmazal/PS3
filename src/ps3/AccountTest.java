@@ -59,20 +59,4 @@ public class AccountTest {
 		System.out.println("Your account was created " + acc1.getDateCreated() + "\n");
 		assertTrue(acc1.getBalance()==20500.00);
 	}	
-	
-/*
-=
-		
-	
-	
-	}
-	@Test
-	public final void testGetBalance() {
-		fail("Not yet implemented"); // TODO
-	}
-	@Test
-	public final void testGetNumber() {
-		fail("Not yet implemented"); // TODO
-	}
-	*/
 }
